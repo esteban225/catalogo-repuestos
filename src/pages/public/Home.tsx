@@ -80,11 +80,11 @@ const stats = [
 
 // ─── VARIANTS ────────────────────────────────────────────────────────────────
 
-const fadeInUp = {
+const fadeInUp: any = {
   hidden: { opacity: 0, y: 40 },
   visible: (i = 0) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: i * 0.12 }
+    transition: { duration: 0.65, ease: "easeOut", delay: i * 0.12 }
   })
 };
 
@@ -109,7 +109,7 @@ function NavBar() {
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.6, ease: "easeOut" } as any}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-zinc-950 border-b border-zinc-800 shadow-2xl shadow-black/40"
@@ -204,7 +204,7 @@ function HeroSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9, filter: "blur(12px)" }}
             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" } as any}
             className="w-full max-w-md md:max-w-2xl"
           >
             <img
@@ -218,7 +218,7 @@ function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" } as any}
             className="space-y-4 max-w-3xl"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black uppercase tracking-tight leading-[0.9] text-white">
@@ -273,7 +273,7 @@ function HeroSection() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 8, 0] }}
-        transition={{ delay: 1.5, duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ delay: 1.5, duration: 2, repeat: Infinity, ease: "easeInOut" } as any}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-zinc-400"
       >
         <span className="text-xs uppercase tracking-widest">Scroll</span>
@@ -338,7 +338,7 @@ function RepuestosCarrusel() {
             <motion.div
               className="flex gap-4 w-max px-6"
               animate={{ x: rowIndex === 0 ? ["0%", "-50%"] : ["-50%", "0%"] }}
-              transition={{ duration: 30 + rowIndex * 5, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 30 + rowIndex * 5, repeat: Infinity, ease: "linear" } as any}
             >
               {[...repuestos, ...repuestos].map((item, index) => (
                 <div

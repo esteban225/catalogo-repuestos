@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function NavBar() {
   return (
     // Quitamos m-2 para evitar saltos raros al hacer scroll, agregamos backdrop-blur por si quieres opacidad
