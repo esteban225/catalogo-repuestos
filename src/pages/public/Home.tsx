@@ -262,7 +262,7 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.9 }}
             className="flex flex-wrap justify-center gap-6 pt-4 text-xs text-zinc-400 font-semibold uppercase tracking-wider"
           >
-            {[" Duitama D.C.", " Lun–Sáb 8am–6pm", " Pagos en efectivo y transferencia", " Domicilios de repuestos"].map(item => (
+            {[" Duitama .", " Lun–Sáb 8am–6pm", " Pagos en efectivo y transferencia", " Domicilios de repuestos"].map(item => (
               <span key={item} className="flex items-center gap-1">{item}</span>
             ))}
           </motion.div>
@@ -540,7 +540,7 @@ function ContactoSection() {
             </h2>
             <div className="space-y-5">
               {[
-                { icon: "📍", label: "Dirección", val: "Calle 123 #45-67, Duitama D.C." },
+                { icon: "📍", label: "Dirección", val: "Calle 123 #45-67, Duitama ." },
                 { icon: "⏰", label: "Horario", val: "Lunes a Sábado: 8:00am – 6:00pm" },
                 { icon: "📞", label: "Teléfono", val: "+57 300 000 0000" },
                 { icon: "📧", label: "Email", val: "info@monomotos.com.co" },
@@ -593,7 +593,7 @@ function Footer() {
           <div className="w-6 h-6 rounded-md bg-red-600 flex items-center justify-center text-white font-black text-xs">M</div>
           <span className="text-zinc-400">MonoMotos © {new Date().getFullYear()}</span>
         </div>
-        <p>Almacén de repuestos & taller multimarca · Duitama D.C.</p>
+        <p>Almacén de repuestos & taller multimarca · Duitama .</p>
         <div className="flex gap-4">
           {["Instagram", "Facebook", "WhatsApp"].map(red => (
             <a key={red} href="#" className="hover:text-white transition-colors">{red}</a>
